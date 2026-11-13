@@ -12,7 +12,7 @@
     },
     {
       "path": "CMakeLists.txt",
-      "sha256": "c7840f2aa99090f644a8e8158b851d95eccdbb48ce41416496e618398386a358"
+      "sha256": "b648680a6a90cf7b6e80c7db05c925be8f63f9b1335529d2de00c4592f9051aa"
     },
     {
       "path": "LICENSE",
@@ -16748,7 +16748,7 @@
     },
     {
       "path": "decomp/src/RVLFaceLib/RFL_System.c",
-      "sha256": "cfdefe0cdcdb4603094aa87bc508eed4e28d64ae7c4f08d09c22ff5693a92d4c"
+      "sha256": "1710e4a3face872b6488d9221eabb603ab289d5be3fd4b7d0d76e7d72a60322d"
     },
     {
       "path": "decomp/src/RVL_SDK/ai/ai.c",
@@ -18639,6 +18639,22 @@
       "sha256": "dfe4103a2de443d77199b97f4519f38021c5823d9a514e01822c6118ce81e323"
     },
     {
+      "path": "platform/include/port/rfl_c/cmath",
+      "sha256": "9c346dcdfaeac820ad70611622809e6c81a0e33646af50a9362a6b43edc07c06"
+    },
+    {
+      "path": "platform/include/port/rfl_c/cstddef",
+      "sha256": "0fff839f2d01e6b612d8644be15502ba937fddde10fddc9e27f41e010f7bead6"
+    },
+    {
+      "path": "platform/include/port/rfl_c/cstdio",
+      "sha256": "1ccb44deb35a5608ea53a10a8806e87c0f37f1c17d7a5c8946f417450388abfc"
+    },
+    {
+      "path": "platform/include/port/rfl_c/rfl_prelude.h",
+      "sha256": "7ec70ad194ad2e35b27cfb79c5a080f9ddc0d5e6692c9d90ef030e2edc104384"
+    },
+    {
       "path": "platform/include/port/settings_backdrop.h",
       "sha256": "7b5ae06b915fb1ca64f13386c70552609a7ca9997946366bf730b68980fcf966"
     },
@@ -18944,7 +18960,7 @@
     },
     {
       "path": "platform/src/nand/nand.cpp",
-      "sha256": "de85408b43e017c59b2556362c2f0b5784c22f6d4ec770171ca39df8b7aa5ae1"
+      "sha256": "6af2aeab0e872d7fde839deab7b79b8d13613c74878f23270ffac3e9c1ba8193"
     },
     {
       "path": "platform/src/os/os_alarm.cpp",
@@ -19031,8 +19047,12 @@
       "sha256": "7c10f1c33ae6fb365e35562f97ac61d4d84eb84951566d3556c3d7487b0afdec"
     },
     {
+      "path": "platform/src/sdk/rfl_port.cpp",
+      "sha256": "29f628b3fc9697506dd56ef1e883462c9e0ea269748dbb9b1cd5910ba36d0d0c"
+    },
+    {
       "path": "platform/src/sdk/stubs_misc.cpp",
-      "sha256": "d36a33b7cacc48d1735a2af9d2619b688ed666eca6b36824eda4e1cb9dd77dc4"
+      "sha256": "40030bf21f4ee3852874ad53952819c16cbcfed96ff93b13d24d3f07fc763219"
     },
     {
       "path": "platform/src/sdk/thp_video.cpp",
@@ -19749,6 +19769,10 @@
     {
       "path": "tests/reduced_motion.cpp",
       "sha256": "5044964bb3519c713550bbf4bd65acb763e153075f8b188af4398eab28d90195"
+    },
+    {
+      "path": "tests/rfl_port_layout.cpp",
+      "sha256": "d6805e6d5d9c85de413aa37e06355bf1502824bf1586cca0c111ac7e3aaea07c"
     },
     {
       "path": "tests/settings_audio.cpp",
@@ -21383,6 +21407,10 @@
       "sha256": "726da91638c2060fe153c52063c725480f8f0a561ab0604e14216468907d1490"
     },
     {
+      "path": "tools/test_rfl_port.sh",
+      "sha256": "c1c75bd626793b142d623d7991b304d6a3ebe2a43f996de4a343743d2357b344"
+    },
+    {
       "path": "tools/test_scheduling_audit.sh",
       "sha256": "30c3afa80e63fddfad60e08fdf15533c5f5321ea8b11190c989a75029db38462"
     },
@@ -22160,7 +22188,7 @@
     },
     {
       "path": "vita/CMakeLists.txt",
-      "sha256": "02a8af1e1a3f0d8fe9f1587041175f7b0fccdbad67ac0311ecc75925249033e5"
+      "sha256": "d07886906b7ccc936fa4e98cc7ffa523edd2c97b83be3c230275cf925fc11997"
     },
     {
       "path": "vita/bringup/CMakeLists.txt",

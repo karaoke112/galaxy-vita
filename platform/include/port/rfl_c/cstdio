@@ -1,0 +1,3 @@
+// The Mii library's C files include C++ header names (CodeWarrior accepts them in C): the C headers.
+#pragma once
+#include <stdio.h>

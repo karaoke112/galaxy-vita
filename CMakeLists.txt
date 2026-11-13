@@ -34,6 +34,13 @@ list(FILTER SDK_SRCS EXCLUDE REGEX "/gx/GXFifo\\.c$|/gx/GXPerf\\.c$")
 list(APPEND SDK_SRCS ${DECOMP}/src/RVL_SDK/os/OSMutex.c ${DECOMP}/src/RVL_SDK/os/OSMessage.c)
 # THP movie audio is plain C (the video decoder is replaced by platform/src/sdk/thp_video.cpp).
 list(APPEND SDK_SRCS ${DECOMP}/src/RVL_SDK/thp/THPAudio.c)
+# The Mii library (RVLFaceLib), with the port's layer for its big-endian files (platform/src/sdk/rfl_port.cpp).
+file(GLOB _rfl CONFIGURE_DEPENDS ${DECOMP}/src/RVLFaceLib/*.c)
+list(APPEND SDK_SRCS ${_rfl})
+# (its C files include <cstdio> and the like: platform/include/port/rfl_c has C versions)
+set_source_files_properties(${_rfl} PROPERTIES INCLUDE_DIRECTORIES ${DECOMP}/../platform/include/port/rfl_c)
+# (and CodeWarrior's LENGTHOF: rfl_prelude.h)
+set_source_files_properties(${_rfl} PROPERTIES COMPILE_OPTIONS "-include;${DECOMP}/../platform/include/port/rfl_c/rfl_prelude.h")
 
 set(DECOMP_INCLUDES
   ${CMAKE_SOURCE_DIR}/platform/include

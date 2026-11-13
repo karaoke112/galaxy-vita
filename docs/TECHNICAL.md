@@ -35,6 +35,7 @@ For building, see [Building](BUILDING.md); for what a release was built from, [S
 | `ux0:data/smg/shadercache/` | vitaGL's compiled shaders (`<key>/v3/...`) and the shader warm-up list |
 | `ux0:data/smg/hdtex.pack` | optional HD textures ([tools/hdtex](../tools/hdtex/README.md)) |
 | `ux0:data/smg/env.txt` | optional `NAME=value` switches, read once at start-up |
+| `ux0:data/mii/wii/RFL_DB.dat` | optional: the player's Miis as a Wii Mii database, read only ([Miis](MIIS.md)) |
 | `ur0:data/libshacccg.suprx` | the shader compiler (the player's own) |
 
 ## Runtime Switches

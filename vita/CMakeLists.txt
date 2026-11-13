@@ -32,6 +32,9 @@ endforeach()
 list(FILTER SDK_SRCS EXCLUDE REGEX "/gx/GXFifo\\.c$|/gx/GXPerf\\.c$")
 list(APPEND SDK_SRCS "${DECOMP}/src/RVL_SDK/os/OSMutex.c"
   "${DECOMP}/src/RVL_SDK/os/OSMessage.c" "${DECOMP}/src/RVL_SDK/thp/THPAudio.c")
+file(GLOB rfl_sources CONFIGURE_DEPENDS "${DECOMP}/src/RVLFaceLib/*.c")
+list(APPEND SDK_SRCS ${rfl_sources})
+# (their include folder for <cstdio> and the like is set by the root inventory, included below)
 
 # Evaluate only upstream's inventory with CMake, never its changing host runtime.
 # Fail closed if these source-section boundaries change upstream.

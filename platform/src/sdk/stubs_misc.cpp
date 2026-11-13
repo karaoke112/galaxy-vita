@@ -1,5 +1,5 @@
 // Wii services that have no meaningful equivalent on Quest: system config
-// (answered with fixed settings), WiiConnect24, Mii (RFL), dynamic modules,
+// (answered with fixed settings), WiiConnect24, dynamic modules,
 // the Wii remote speaker encoder, VF.
 #include <string.h>
 
@@ -51,30 +51,7 @@ NWC24Err NWC24SetMsgTag(NWC24MsgObj*, u16) { return kNwcUnavailable; }
 NWC24Err NWC24SetMsgText(NWC24MsgObj*, const char*, u32, NWC24Charset, NWC24Encoding) { return kNwcUnavailable; }
 NWC24Err NWC24SetMsgToId(NWC24MsgObj*, NWC24UserId) { return kNwcUnavailable; }
 
-// ---------------------------------------------------------------------------
-// RVL Face Library: behaves like a console whose Mii Channel has no Miis:
-// initialization succeeds and every database slot is empty.
-// ---------------------------------------------------------------------------
-static const RFLErrcode kRflNoData = RFLErrcode_Broken;
-void RFLDrawOpa(const RFLCharModel*) {}
-void RFLDrawOpaCore(const RFLCharModel*, const RFLDrawCoreSetting*) {}
-void RFLDrawXlu(const RFLCharModel*) {}
-void RFLDrawXluCore(const RFLCharModel*, const RFLDrawCoreSetting*) {}
-void RFLExit(void) {}
-RFLErrcode RFLGetAdditionalInfo(RFLAdditionalInfo*, RFLDataSource, RFLMiddleDB*, u16) { return kRflNoData; }
-RFLErrcode RFLGetAsyncStatus(void) { return RFLErrcode_Success; }
-s32 RFLGetLastReason(void) { return 0; }
-u32 RFLGetModelBufferSize(RFLResolution, u32) { return 32; }
-u32 RFLGetWorkSize(BOOL) { return 32; }
-RFLErrcode RFLInitCharModel(RFLCharModel*, RFLDataSource, RFLMiddleDB*, u16, void*, RFLResolution, u32) { return kRflNoData; }
-RFLErrcode RFLInitResAsync(void*, void*, u32, BOOL) { return RFLErrcode_Success; }
-BOOL RFLIsAvailableOfficialData(u16) { return FALSE; }
-void RFLLoadMaterialSetting(const RFLDrawCoreSetting*) {}
-void RFLLoadVertexSetting(const RFLDrawCoreSetting*) {}
-RFLErrcode RFLMakeIcon(void*, RFLDataSource, RFLMiddleDB*, u16, RFLExpression, const RFLIconSetting*) { return kRflNoData; }
-BOOL RFLSearchOfficialData(const RFLCreateID*, u16*) { return FALSE; }
-void RFLSetExpression(RFLCharModel*, RFLExpression) {}
-void RFLSetMtx(RFLCharModel*, const Mtx) {}
+// The RVL Face Library (Miis) is the decompilation's, built with the game (decomp/src/RVLFaceLib, platform/src/sdk/rfl_port.cpp).
 
 // ---------------------------------------------------------------------------
 // RSO dynamic modules: only used by the Home Button menu, which the port

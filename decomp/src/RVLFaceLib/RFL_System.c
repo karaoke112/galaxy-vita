@@ -1,4 +1,7 @@
 #include "RVLFaceLibInternal.h"
+#ifdef TARGET_PC
+void port_rfl_resource_to_native(void* buffer, u32 size);
+#endif
 #include <cstdio>
 #include <revolution/mem.h>
 #include <revolution/types.h>
@@ -87,6 +90,10 @@ RFLErrcode RFLInitResAsync(void* workBuffer, void* resBuffer, u32 resSize, BOOL 
 
         if (resBuffer != NULL) {
             RFLiLoader* loader = RFLiGetLoader_();
+#ifdef TARGET_PC
+            // The resource is big-endian; the port turns it into this host's layout once (platform/src/sdk/rfl_port.cpp).
+            port_rfl_resource_to_native(resBuffer, resSize);
+#endif
             loader->cached = TRUE;
             loader->cacheSize = resSize;
             loader->cache = resBuffer;
